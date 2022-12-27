@@ -38,7 +38,9 @@ const clearError = () => {
 
 const setAudio = (base64, text) => {
     document.getElementById('success').style.display = 'block'
+    document.getElementById('audio').pause();
     document.getElementById('audio').src = `data:audio/mpeg;base64,${base64}`
+    document.getElementById('audio').play();
     document.getElementById('generatedtext').innerHTML = `"${text}"`
 }
 
